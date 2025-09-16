@@ -29,7 +29,7 @@ Follow these simple steps to host your own instance of the Battle Nexus bot on T
 
 Open Termux and run the following command to download the bot's files:
 ```bash
-git clone [https://github.com/mahadi99900/WoW-game-for-telegram.git](https://github.com/mahadi99900/WoW-game-for-telegram.git)
+git clone [https://github.com/mahadi99900/WoW-game-for-telegram.git](https://github.com/mahadi99900/WoW-game-for-telegram.git)```
 
 
 # Now I'm showing you all the processes to run them.
