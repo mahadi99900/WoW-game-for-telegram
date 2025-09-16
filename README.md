@@ -32,3 +32,4 @@ Open Termux and run the following command to download the bot's files:
 git clone [https://github.com/mahadi99900/WoW-game-for-telegram.git](https://github.com/mahadi99900/WoW-game-for-telegram.git)
 
 
+# Now I'm showing you all the processes to run them.
