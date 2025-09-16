@@ -97,6 +97,5 @@ rm -rf WoW-game-for-telegram
 
 If you need any assistance or have questions, please don't hesitate to reach out to us via Telegram.
 
-[![Telegram](https://img.shields.io/badge/Telegram-Message_Me-blue?style=for-the-badge&logo=telegram)](https://t.me/mahadihasan099)
 
 **Username:** @mahadihasan099
