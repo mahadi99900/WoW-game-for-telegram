@@ -1,10 +1,10 @@
 #!/bin/bash
 
-echo "বট চালু হচ্ছে... (বন্ধ করতে Ctrl+C চাপুন)"
+echo "Starting the bot... (Press Ctrl+C to stop)"
 
 while true
 do
     python main_bot.py
-    echo "বট বন্ধ হয়ে গেছে। ৫ সেকেন্ড পর আবার চালু হচ্ছে..."
+    echo "Bot crashed or stopped. Restarting in 5 seconds..."
     sleep 5
 done
