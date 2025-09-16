@@ -9,65 +9,86 @@ Welcome to **Battle Nexus**, a feature-rich, interactive gaming bot for Telegram
 * **🏞️ Hunt Animals:** Discover and collect a variety of animals, from common cats to mythical dragons.
 * **🐾 Build Your Zoo:** Every animal you hunt is added to your personal zoo. Manage your collection and increase your total power.
 * **👤 Player Profile:** Track your progress with a detailed profile showing your level, experience points (XP), coin balance, and total zoo power.
-* **⚔️ Epic Battles:**
-    * **PvP (Player vs. Player):** Challenge your friends to a battle of zoo supremacy.
-    * **PvE (Player vs. Environment):** Fight against the bot to earn XP and test your zoo's strength.
-* **💰 Betting & Games:**
-    * **Coinflip:** Bet coins against other players in a game of luck.
-    * **Slots:** Try your luck with the slot machine to win big rewards.
-* **🏆 Leaderboard:** Compete with other players and see who is the richest in the game.
-* **💸 Economy System:** Send money to your friends using the `/give` command and sell animals for coins.
-* **🙏 Pray for Luck:** Increase your luck to find rarer and more powerful animals during your hunts.
+* **⚔️ Epic Battles:** PvP (Player vs. Player) and PvE (Player vs. Environment).
+* **💰 Betting & Games:** Coinflip and Slot Machine.
+* **🏆 Leaderboard:** Compete to become the richest player.
 
 ---
 
-## 🚀 Quickstart Guide for Termux
+## 🚀 Complete Termux Guide: From Setup to Troubleshooting
 
-The following code block contains all the necessary commands to run in the terminal. The comments (lines starting with #) explain what each command does.
+This block contains all the necessary terminal commands in a step-by-step order, covering setup, daily use, and troubleshooting.
 
 ```bash
-# Step 1: Clone the repository from GitHub
-# This downloads all the bot's files into a new folder.
+# === Part 1: Initial Setup (Do this only once) ===
+
+# Step 1: Download the bot files from GitHub
 git clone [https://github.com/mahadi99900/WoW-game-for-telegram.git](https://github.com/mahadi99900/WoW-game-for-telegram.git)
 
-# Step 2: Enter the newly created directory
+# Step 2: Enter the downloaded folder
 cd WoW-game-for-telegram
 
-# Step 3: Run the setup script to install everything
-# It will ask for your Telegram Bot Token.
+# Step 3: Run the setup script
+# It will install everything needed and ask for your Telegram Bot Token.
 bash setup.sh
 
-# --- Bot Management Commands ---
+
+# === Part 2: Daily Usage (After setup is complete) ===
 
 # To START the bot in the background:
-# After setup, use this command to run the bot.
 bash start.sh
 
 # To STOP the bot when it's running:
-# Use this command anytime you want to stop the bot.
 bash stop.sh
 
-# Run this to delete all files here:
 
+# === Part 3: Troubleshooting (If the bot is not responding) ===
+# If your bot doesn't respond to commands and you see a 'Conflict' error in the terminal,
+# it means the bot is running in multiple places at once. Follow the steps below to fix it.
+
+# Step 1: Stop the main bot process
+bash stop.sh
+
+# Step 2: Force-kill any leftover processes
+pkill -f "python3 main_bot.py"
+
+# Step 3 (Optional): Check if all processes are stopped
+# If this command shows no number, you can proceed to the next step.
+pgrep -f "python3 main_bot.py"
+
+# Step 4: Restart the bot cleanly (only once)
+bash start.sh
+
+
+# === Part 4: How to Update or Re-install ===
+# If you want to get the latest code updates or start over.
+
+# Step 1: Go back from the current folder
+cd ..
+
+# Step 2: Delete the old bot folder
 rm -rf WoW-game-for-telegram
 
+# Step 3: Go back to Part 1 and start again with the 'git clone' command.
+
+
 ​💬 How to Play: In-Game Commands
-​Once the bot is running and added to your Telegram group, you can play the game using the following commands. These commands should be sent in the group chat.
+​Once the bot is running and in your group, use these commands in the group chat.
 ​Economy & Management
 ​/give @username [amount]
 ​Use this command to send a specific amount of coins to another player.
 ​Example: /give @Player2 500
 ​/sell [animal_id]
-​Use this to sell an animal from your zoo to get coins. You can find the animal's ID by clicking the 'My Zoo' button or using the /zoo command.
+​Use this to sell an animal from your zoo to get coins. Find the animal's ID in your /zoo.
 ​Example: /sell a1b2c3d4
 ​Gaming & Interaction
 ​/battle @username
-​Challenge another player in the group to a battle. The player with the higher total zoo power wins!
+​Challenge another player in the group to a battle.
 ​Example: /battle @Rival_Player
 ​/slots [amount]
-​Use this command to play the slot machine with a specific bet amount.
+​Use this command to play the slot machine.
 ​Example: /slots 100
 ​/bet @username [amount]
-​Use this command to challenge another player to a coinflip bet.
+​Challenge another player to a coinflip bet.
 ​Example: /bet @Friend 250
 ​<!-- end list -->
