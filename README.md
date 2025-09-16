@@ -21,14 +21,53 @@ Welcome to **Battle Nexus**, a feature-rich, interactive gaming bot for Telegram
 
 ---
 
-## 🚀 Deployment & Installation on Termux
+## 🚀 Quickstart Guide for Termux
 
-Follow these simple steps to host your own instance of the Battle Nexus bot on Termux.
+The following code block contains all the necessary commands to run in the terminal. The comments (lines starting with #) explain what each command does.
 
-**1. Clone the Repository**
-
-Open Termux and run the following command to download the bot's files:
 ```bash
+# Step 1: Clone the repository from GitHub
+# This downloads all the bot's files into a new folder.
 git clone [https://github.com/mahadi99900/WoW-game-for-telegram.git](https://github.com/mahadi99900/WoW-game-for-telegram.git)
 
+# Step 2: Enter the newly created directory
+cd WoW-game-for-telegram
 
+# Step 3: Run the setup script to install everything
+# It will ask for your Telegram Bot Token.
+bash setup.sh
+
+# --- Bot Management Commands ---
+
+# To START the bot in the background:
+# After setup, use this command to run the bot.
+bash start.sh
+
+# To STOP the bot when it's running:
+# Use this command anytime you want to stop the bot.
+bash stop.sh
+
+# Run this to delete all files here:
+
+rm -rf WoW-game-for-telegram
+
+​💬 How to Play: In-Game Commands
+​Once the bot is running and added to your Telegram group, you can play the game using the following commands. These commands should be sent in the group chat.
+​Economy & Management
+​/give @username [amount]
+​Use this command to send a specific amount of coins to another player.
+​Example: /give @Player2 500
+​/sell [animal_id]
+​Use this to sell an animal from your zoo to get coins. You can find the animal's ID by clicking the 'My Zoo' button or using the /zoo command.
+​Example: /sell a1b2c3d4
+​Gaming & Interaction
+​/battle @username
+​Challenge another player in the group to a battle. The player with the higher total zoo power wins!
+​Example: /battle @Rival_Player
+​/slots [amount]
+​Use this command to play the slot machine with a specific bet amount.
+​Example: /slots 100
+​/bet @username [amount]
+​Use this command to challenge another player to a coinflip bet.
+​Example: /bet @Friend 250
+​<!-- end list -->
